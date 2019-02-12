@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Jokedst.GetOpt;  //Sử dụng NuGet để cài đặt thêm gói Jokedst.GetOpt
 
+
 namespace powerpoint2pdf
 {
     class Program
@@ -41,6 +42,7 @@ namespace powerpoint2pdf
             foreach (FileInfo f in dir.GetFiles("*.pptx"))
             {
                 Console.WriteLine("File {0}", f.FullName);
+                PowerpointFile.OpenPowerpointFile(f.FullName);
             }
 
             return 0;
