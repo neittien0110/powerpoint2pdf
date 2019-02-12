@@ -39,7 +39,7 @@ namespace powerpoint2pdf
             //Open and scan all pptx files
             DirectoryInfo dir = new DirectoryInfo(InputDirectory);
 
-            foreach (FileInfo f in dir.GetFiles("*.pptx"))
+            foreach (FileInfo f in dir.GetFiles("*.ppt*"))
             {
                 Console.WriteLine("File {0}", f.FullName);
                 PowerpointFile.OpenPowerpointFile(f.FullName);
